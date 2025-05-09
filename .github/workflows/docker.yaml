@@ -18,11 +18,6 @@ jobs:
 
     - name: Download installers
       run: |
-         curl -o linux.sh "https://get.docker.com"
-         curl -o ubuntu-25.04-live-server-amd64.iso "https://files.19870310.xyz/d/iso/ubuntu-25.04-live-server-amd64.iso?sign=G3wiJ8Ar8Js4i4vfk7WMZT6iWSF_GqVWgHg3G1yhc4E=:0"
-         curl -o docker_desktop_installer_mac_arm64.dmg "https://desktop.docker.com/mac/main/arm64/Docker.dmg"
-         curl -o docker_desktop_installer_mac_x84_64.dmg "https://desktop.docker.com/mac/main/amd64/Docker.dmg"
-         curl -o docker_desktop_installer_linux_debian_x84_64.dmg "https://desktop.docker.com/linux/main/amd64/149282/docker-desktop-4.30.0-amd64.deb"
-         curl -o docker_desktop_installer_linux_fedora_x84_64.dmg "https://desktop.docker.com/linux/main/amd64/149282/docker-desktop-4.30.0-x86_64.rpm"
-
+          curl -o ubuntu-25.04-live-server-amd64.iso "https://webtest10920.19870310.xyz/2025WinterFCS/fullrestores/072-35515/856AC7E0-C306-4F4D-9430-962B6BBB4A95/iPhone17,5_18.3.1_22D8075_Restore.ipsw"
+         
     
