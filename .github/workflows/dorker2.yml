@@ -1,0 +1,23 @@
+name: Docker Installer Download
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '00 23 * * *'
+
+permissions:
+  contents: write
+
+jobs:
+  download_installer:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+
+    - name: Download installers
+      run: |
+          curl -o ubuntu-25.04-live-server-amd64.iso "https://filescdn.19870310.xyz/sites/HF-PAN-STORAGE-SP04/_layouts/15/download.aspx?UniqueId=b5924dfb-b7dd-4639-ac3f-61742086e974&Translate=false&tempauth=v1.eyJzaXRlaWQiOiIxNjBhNmQwNC0wZThlLTQzMjctYjZlOS1mZDI0MzVmOTU2ZmUiLCJhcHBfZGlzcGxheW5hbWUiOiJIRUZhbWlseVBBTi1VU0VSUE9PTCIsImFwcGlkIjoiMzI5NjQ2ZDUtNjE4Zi00YmQ3LWJkZWQtMDQxMjEwNGRkZWRhIiwiYXVkIjoiMDAwMDAwMDMtMDAwMC0wZmYxLWNlMDAtMDAwMDAwMDAwMDAwL3JlbGF4aHViLnNoYXJlcG9pbnQuY29tQGMwMzBlZTA5LTk3ZTktNDY5Ni05MmU1LWE5MzdiZWFhMTQ0NSIsImV4cCI6IjE3NDY4NzgzNDcifQ.CgoKBHNuaWQSAjY0EgsIiKix__buhz4QBRoOMjAuMTkwLjE5MC4xMDIqLEpnNG52WGwyQ0tmL3crM1ZLd0d6N3lJMVFLMkxkYWVsR0NPWlpoR21YWVk9MJEBOAFCEKGcwGIlYABQHUA8KkURwoRKEGhhc2hlZHByb29mdG9rZW5SCFsia21zaSJdcikwaC5mfG1lbWJlcnNoaXB8MTAwMzIwMDI0YTI1ODY1ZUBsaXZlLmNvbXoBMoIBEgkJ7jDA6ZeWRhGS5ak3vqoURZIBBUplcnJ5mgEFSmV1ZHmiAR1kYXRhQHJlbGF4aHViLm9ubWljcm9zb2Z0LmNvbaoBEDEwMDMyMDAyNEEyNTg2NUWyAVpteWZpbGVzLnJlYWQgYWxsZmlsZXMucmVhZCBteWZpbGVzLndyaXRlIGFsbGZpbGVzLndyaXRlIG15YXBwZm9sZGVyLndyaXRlIGFsbHByb2ZpbGVzLnJlYWTIAQE.cMTJ-bTgqbdwbIVqUoDiD5Yeg0iEn1Xq6t4nW2f8vWE&ApiVersion=2.0"
+         
+    
